@@ -13,6 +13,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         th, td {
@@ -20,9 +21,35 @@
             padding: 10px; 
         }
 
-        thead, tfoot {
-            background-color: gray;
+        caption {
             color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(2, 64, 92, 0.884);
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(23, 37, 241);
+        }
+
+        thead, tfoot {
+            background-color: rgb(23, 37, 241);
+            color: white;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */ 
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
         }
     </style>
 </head>
@@ -30,6 +57,7 @@
      <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -38,33 +66,70 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estados</th>
-                <th>População</th>
+                <th scope="col">Estados</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td>45 919 049</td>
+                <td class="num">45 919 049</td>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
-                <td>21 168 791</td>
+                <td class="num">21 168 791</td>
             </tr>
             <tr>
                 <td>Rio de Jneiro</td>
-                <td>17 264 943</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 985 284</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">10 444 526</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 693 929</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 674 793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 240 580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 777 124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 338 473</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td>0000</td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>105 055 075</strong></td>
             </tr>
         </tfoot>
     </table>
-    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores distinctio veritatis incidunt architecto nam perspiciatis numquam saepe eum, ad maxime tempora ut fuga. Libero delectus quaerat veritatis officia vitae?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus autem repudiandae at corrupti perferendis doloremque, vel quae, minus fuga quisquam animi nobis praesentium eaque ipsam impedit cum vitae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi commodi omnis dicta. Quis accusamus, illo in facere rerum doloremque esse praesentium voluptate. Tenetur excepturi magnam exercitationem facilis aliquid asperiores.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores distinctio veritatis incidunt architecto nam perspiciatis numquam saepe eum, ad maxime tempora ut fuga. Libero delectus quaerat veritatis officia vitae?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus autem repudiandae at corrupti perferendis doloremque, vel quae, minus fuga quisquam animi nobis praesentium eaque ipsam impedit cum vitae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi commodi omnis dicta. Quis accusamus, illo in facere rerum doloremque esse praesentium voluptate. Tenetur excepturi magnam exercitationem facilis aliquid asperiores.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores distinctio veritatis incidunt architecto nam perspiciatis numquam saepe eum, ad maxime tempora ut fuga. Libero delectus quaerat veritatis officia vitae?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus autem repudiandae at corrupti perferendis doloremque, vel quae, minus fuga quisquam animi nobis praesentium eaque ipsam impedit cum vitae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi commodi omnis dicta. Quis accusamus, illo in facere rerum doloremque esse praesentium voluptate. Tenetur excepturi magnam exercitationem facilis aliquid asperiores.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores distinctio veritatis incidunt architecto nam perspiciatis numquam saepe eum, ad maxime tempora ut fuga. Libero delectus quaerat veritatis officia vitae?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus autem repudiandae at corrupti perferendis doloremque, vel quae, minus fuga quisquam animi nobis praesentium eaque ipsam impedit cum vitae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi commodi omnis dicta. Quis accusamus, illo in facere rerum doloremque esse praesentium voluptate. Tenetur excepturi magnam exercitationem facilis aliquid asperiores.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores distinctio veritatis incidunt architecto nam perspiciatis numquam saepe eum, ad maxime tempora ut fuga. Libero delectus quaerat veritatis officia vitae?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus autem repudiandae at corrupti perferendis doloremque, vel quae, minus fuga quisquam animi nobis praesentium eaque ipsam impedit cum vitae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi commodi omnis dicta. Quis accusamus, illo in facere rerum doloremque esse praesentium voluptate. Tenetur excepturi magnam exercitationem facilis aliquid asperiores.</p>
 </body>
 </html>
