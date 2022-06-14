@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam hic voluptates magnam dignissimos voluptatem? Pariatur voluptate explicabo debitis laboriosam culpa maxime, voluptatum nostrum tenetur eligendi cumque odio, perspiciatis, consequatur esse!</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag01.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pag02.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag03.html" target="frame">Terceira página</a></li>
+    </ul>  
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo omnis qui asperiores tempore reiciendis. In nulla eligendi voluptate culpa laudantium, hic magni iste ea consequuntur vel optio expedita sequi enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi fugit, quam ab mollitia laboriosam, quidem vel dolores iure esse doloribus, officia magnam consectetur. Voluptas officiis deserunt aliquam alias esse quidem.</p>
+     
+    <!--Com o srcdoc conseguimos inserir contéudos html-->
+    <iframe id="tela" name="frame" srcdoc="<h1>Ecolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo omnis qui asperiores tempore reiciendis. In nulla eligendi voluptate culpa laudantium, hic magni iste ea consequuntur vel optio expedita sequi enim.</p>"
+         <p>Infelizmente seu navegador não é compativel com isso</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate possimus, enim dignissimos quis quisquam similique animi rerum dolore sunt repudiandae officia, nostrum minima esse doloribus nisi laborum quasi, numquam neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos debitis perferendis, deleniti odio minima voluptas animi dolorem aperiam hic possimus, molestiae quibusdam soluta, aspernatur sed maxime quasi reiciendis suscipit beatae?</p>
+</body>
+</html>
